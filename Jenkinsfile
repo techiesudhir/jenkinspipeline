@@ -20,6 +20,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
+        input(message: 'Do u want to deploy?', id: 'ok')
         echo 'Deploy to nexus'
       }
     }
